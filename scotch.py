@@ -1,12 +1,12 @@
 import csv
 
-infile = open("iowa-liquor-sample.csv")
-spamreader = csv.reader(infile, delimiter=',')
-sum = 0 
-for row in spamreader:
+input_file = open("iowa-liquor-sample.csv")
+csv_file = csv.reader(input_file, delimiter=',')
+num_whiskies = 0 
+for row in csv_file:
     for entry in row:
         if "single malt scotch" in entry.lower():
-            sum += 1
+            num_whiskies += 1
             break
-print sum
+print num_whiskies
 
